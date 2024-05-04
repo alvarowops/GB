@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'MetalGothic';
+    src: url('../fonts/MetalGothicDemoVersionRegular-WyB9A.ttf') format('truetype');
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+#background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../gif/gif.gif'); /* Add the URL of your GIF file here */
+    background-size: cover;
+    background-position: center;
+    filter: contrast(150%) brightness(50%);
+    opacity: 0.8;
+    animation: background-animation 5s infinite;
+}
+#band-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'MetalGothic', sans-serif;
+    font-size: 4rem;
+    color: white;
+    text-align: center;
+    text-shadow: 0.05em 0.05em 0.05em rgba(255, 255, 255, 0.5), -0.05em -0.05em 0.05em rgba(0, 0, 0, 0.5);
+    animation: text-animation 2s infinite;
+}
+
+@keyframes background-animation {
+    0% {
+        filter: contrast(150%) brightness(50%);
+    }
+    50% {
+        filter: contrast(100%) brightness(100%);
+    }
+    100% {
+        filter: contrast(150%) brightness(50%);
+    }
+}
+
+@keyframes text-animation {
+    0% {
+        text-shadow: 0.05em 0.05em 0.05em rgba(255, 255, 255, 0.5), -0.05em -0.05em 0.05em rgba(0, 0, 0, 0.5);
+    }
+    50% {
+        text-shadow: 0.1em 0.1em 0.1em rgba(255, 255, 255, 0.5), -0.1em -0.1em 0.1em rgba(0, 0, 0, 0.5);
+    }
+    100% {
+        text-shadow: 0.05em 0.05em 0.05em rgba(255, 255, 255, 0.5), -0.05em -0.05em 0.05em rgba(0, 0, 0, 0.5);
+    }
+}
